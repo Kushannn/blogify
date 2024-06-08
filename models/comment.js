@@ -20,6 +20,7 @@ const commentSchema = new Schema(
   }
 );
 
-const Comment = model("comment", commentSchema);
+const Comment = mongoose.model("comment", commentSchema);
+await Comment.findOne();
 
 module.exports = Comment;
