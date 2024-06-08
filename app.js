@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 8081;
 // };
 
 (async function () {
-  mongoose.connect(process.env.MONGO_URL).then((e) => {
+  await mongoose.connect(process.env.MONGO_URL).then((e) => {
     console.log("MongoDb connected");
   });
 })();
