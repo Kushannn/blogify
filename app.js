@@ -14,9 +14,17 @@ const { checkForAuthentication } = require("./middlewares/authentication.js");
 const app = express();
 const PORT = process.env.PORT || 8081;
 
-mongoose.connect(process.env.MONGO_URL).then((e) => {
-  console.log("MongoDb connected");
-});
+// async () => {
+//   mongoose.connect(process.env.MONGO_URL).then((e) => {
+//     console.log("MongoDb connected");
+//   });
+// };
+
+(async function () {
+  mongoose.connect(process.env.MONGO_URL).then((e) => {
+    console.log("MongoDb connected");
+  });
+})();
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));

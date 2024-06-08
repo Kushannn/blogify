@@ -24,6 +24,5 @@ const blogSchema = new Schema(
 );
 
 const Blog = mongoose.model("blog", blogSchema);
-await Blog.findOne();
 
 module.exports = Blog;

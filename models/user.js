@@ -72,6 +72,5 @@ userSchema.static(
 );
 
 const User = mongoose.model("user", userSchema);
-await User.findOne();
 
 module.exports = User;

@@ -21,6 +21,5 @@ const commentSchema = new Schema(
 );
 
 const Comment = mongoose.model("comment", commentSchema);
-await Comment.findOne();
 
 module.exports = Comment;
